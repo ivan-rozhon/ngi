@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
-// import { FloatingActionButton } from 'materialize-css';
+import { Parallax } from 'materialize-css';
 
 @Component({
   selector: 'ngi-root',
@@ -8,17 +8,19 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  imageUrl: string;
+  profileImageUrl: string;
+  parallaxImageUrl: string;
 
   constructor() {
-    this.imageUrl = './../assets/images/rozhon.jpeg';
+    this.profileImageUrl = './../assets/images/rozhon.jpeg';
+    this.parallaxImageUrl = './../assets/images/parallax.jpg';
   }
 
-  // @ViewChild('fixedActionBtn')
-  // fixedActionBtn: ElementRef;
+  @ViewChild('parallax')
+  parallax: ElementRef;
 
   ngAfterViewInit(): void {
-    // // initialize materialize components
-    // FloatingActionButton.init(this.fixedActionBtn.nativeElement);
+    // initialize materialize components
+    Parallax.init(this.parallax.nativeElement);
   }
 }
