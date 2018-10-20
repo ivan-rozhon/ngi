@@ -5,7 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "deploy": "firebase deploy --only hosting",
+    "prefirebase": "ng build --prod",
+    "firebase": "npm run deploy"
   },
   "private": true,
   "dependencies": {
