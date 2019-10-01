@@ -17,6 +17,11 @@ const routes: Routes = [
         component: LandingComponent
       },
       {
+        path: 'privacy-policy',
+        loadChildren: () => import('./privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule)
+      },
+
+      {
         path: '**',
         component: NotFoundComponent
       }
